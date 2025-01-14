@@ -12,16 +12,14 @@ function App() {
 }
 
 const StyledButton = styled.button`
-  background-color: #007bff;
-  color: white;
+  background-color: ${({ theme }) => theme?.colors?.primary ?? 'red'};
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  font-size: 16px;
   cursor: pointer;
 
   &:hover {
-    background-color: #0056b3;
+    background-color: ${({ theme }) => theme?.colors?.primary ?? 'red'};
   }
 `
 
