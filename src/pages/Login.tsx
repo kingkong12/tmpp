@@ -5,7 +5,6 @@ import { LoginForm } from '../components/molecules'
 export default function Login() {
   return (
     <Container>
-      Login FORMc
       <FormWrapper>
         <LoginForm />
       </FormWrapper>
@@ -14,11 +13,13 @@ export default function Login() {
 }
 
 const Container = styled.div`
-  width: 500px;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
+  /* background-color: pink; */
+  /* padding: 20px; */
+  /* border: 1px solid #ccc;
+  border-radius: 10px; */
 `
 
 const FormWrapper = styled.div`

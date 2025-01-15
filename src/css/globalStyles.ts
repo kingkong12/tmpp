@@ -18,12 +18,15 @@ const GlobalStyle = createGlobalStyle`
     html, body {
     font-family: 'CustomFont', Arial, sans-serif; /* Use the custom font */
     line-height: 1.6;
-    font-size: 8px; /* Fallback font size set to 8px */
+    //font-size: 8px; /* Fallback font size set to 8px */
     font-size: var(--default-font-size, 16px); /* Use browser's default font size if available */
     color: #333;
-    background-color: #f8f8f8;
+    background-color: lightblue;
     height: 100%; /* Use complete height of the container */
-    }
+    display: flex;
+
+;    
+}
 
     #root {
     height: 100%; /* Ensure the root element also takes full height */

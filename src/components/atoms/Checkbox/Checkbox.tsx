@@ -17,9 +17,6 @@ const Checkbox: React.FC<CheckboxProps> = ({
 }) => {
   return (
     <CheckboxWrapper>
-      {/* Associate label with the input via htmlFor */}
-      <Label htmlFor={id}>{label}</Label>
-
       {/* Add aria-checked and role for screen readers */}
       <StyledCheckbox
         id={id}
@@ -34,6 +31,9 @@ const Checkbox: React.FC<CheckboxProps> = ({
       <Icon checked={checked}>
         {checked && <img src={tickMark} alt="Checked" />}
       </Icon>
+
+      {/* Associate label with the input via htmlFor */}
+      <Label htmlFor={id}>{label}</Label>
     </CheckboxWrapper>
   )
 }

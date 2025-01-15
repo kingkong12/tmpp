@@ -7,6 +7,7 @@ import {
   Icon,
 } from './textField.styles'
 import eyeIcon from '../../../assets/svg/eyeIcon.svg'
+import eyeShow from '../../../assets/svg/eyeShow.svg'
 
 interface InputFieldProps {
   id?: string
@@ -50,13 +51,18 @@ const TextField: React.FC<InputFieldProps> = ({
           onChange={(e) => setValue(e.target.value)}
           value={value}
         />
-        <Icon
-          onClick={handleIconClick}
-          role="button"
-          aria-label="Toggle password visibility"
-        >
-          <img src={eyeIcon} alt="Toggle visibility" />
-        </Icon>
+        {type === 'password' && (
+          <Icon
+            onClick={handleIconClick}
+            role="button"
+            aria-label="Toggle password visibility"
+          >
+            <img
+              src={isPasswordVisible ? eyeIcon : eyeShow}
+              alt="Toggle visibility"
+            />
+          </Icon>
+        )}
       </InputIconWrapper>
       <Label htmlFor={id} isFocused={isFocused || value !== ''}>
         {label}
