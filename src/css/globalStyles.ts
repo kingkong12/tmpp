@@ -19,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'CustomFont', Arial, sans-serif; /* Use the custom font */
     line-height: 1.6;
     font-size: 8px; /* Fallback font size set to 8px */
-    font-size: var(--default-font-size, 8px); /* Use browser's default font size if available */
+    font-size: var(--default-font-size, 16px); /* Use browser's default font size if available */
     color: #333;
     background-color: #f8f8f8;
     height: 100%; /* Use complete height of the container */
