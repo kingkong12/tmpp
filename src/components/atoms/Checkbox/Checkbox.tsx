@@ -15,9 +15,15 @@ const Checkbox: React.FC<CheckboxProps> = ({
   checked,
   onChange,
 }) => {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === ' ') {
+      e.preventDefault()
+      onChange(!checked)
+    }
+  }
+
   return (
     <CheckboxWrapper>
-      {/* Add aria-checked and role for screen readers */}
       <StyledCheckbox
         id={id}
         type="checkbox"
@@ -25,14 +31,14 @@ const Checkbox: React.FC<CheckboxProps> = ({
         onChange={(e) => onChange(e.target.checked)}
         aria-checked={checked}
         role="checkbox"
+        tabIndex={0}
+        onKeyDown={handleKeyDown}
       />
 
-      {/* Visual indicator */}
       <Icon checked={checked}>
         {checked && <img src={tickMark} alt="Checked" />}
       </Icon>
 
-      {/* Associate label with the input via htmlFor */}
       <Label htmlFor={id}>{label}</Label>
     </CheckboxWrapper>
   )

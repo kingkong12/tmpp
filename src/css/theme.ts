@@ -19,6 +19,7 @@ const theme = {
     background: '#F5DEB3', // A light wheat color for the background
     text: '#FFFFFF', // White text color for contrast
     chineseSilver: '#CCCCCC',
+    blackShade: '#5E6B75',
   },
   fontColor: {
     primary: '#333333',

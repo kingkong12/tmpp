@@ -6,7 +6,7 @@ export const SecurityBanner = styled.div`
   justify-content: center;
   width: 100%;
   height: 34.5px;
-  background-color: ${({ theme }) => theme.colors.darkGrayBlue || '#486082'};
+  background-color: ${({ theme }) => theme.colors.blackShade || '#486082'};
   color: ${({ theme }) => theme.colors.white || '#ffffff'};
   font-family: 'Neue Haas Grotesk Display', Arial, sans-serif;
   font-size: 16px;

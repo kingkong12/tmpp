@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { media } from '../../../utils/mediaQueries'
 
 export const InputWrapper = styled.div`
   position: relative;
@@ -11,12 +12,8 @@ export const InputIconWrapper = styled.div`
   align-items: center;
   position: relative;
   border: 1px solid ${({ theme }) => theme.colors.chineseSilver || '#ccc'};
-  padding-right: 2.5rem;
+  /* padding-right: 2.5rem; */
   transition: border-color 0.3s ease;
-
-  &:focus-within {
-    border-color: ${({ theme }) => theme.colors.primary || '#D2691E'};
-  }
 `
 
 export const Icon = styled.div`
@@ -34,16 +31,28 @@ export const Icon = styled.div`
   }
 `
 
-export const Input = styled.input`
+export const Input = styled.input<{ type: string }>`
   flex: 1;
   border: none;
   outline: none;
   font-size: 1rem;
   line-height: 1.12rem;
   padding: 0.5rem 0.5rem;
-  padding-right: 2.5rem;
   width: 100%;
-  min-height: 3.375rem;
+  height: 54px;
+  padding-right: ${({ type }) => (type === 'password' ? '2.5rem' : '0.5rem')};
+
+  ${media.minSmallLargeDesktop(`
+       height: 43.12px;
+    `)}
+
+  ${media.minDesktop(`
+       height: 48.52px;
+    `)} 
+    
+  ${media.minLargeDesktop(`
+       height: 67.5px;
+    `)}
 `
 
 export const Label = styled.label<{ isFocused: boolean }>`

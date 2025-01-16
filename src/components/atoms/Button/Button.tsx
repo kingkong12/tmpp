@@ -14,7 +14,7 @@ const StyledButton = styled.button`
   cursor: pointer;
   transition: all 0.3s ease;
 
-  max-width: 9.125rem; /* 146px */
+  min-width: 9.125rem; /* 146px */
 
   &:hover {
     background-color: #e56c1a; /* Slightly darker on hover */

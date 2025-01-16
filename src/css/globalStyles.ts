@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import Wallpaper from '../assets/svg/wallpaper.svg'
 
 const GlobalStyle = createGlobalStyle`
     @font-face {
@@ -21,16 +22,32 @@ const GlobalStyle = createGlobalStyle`
     //font-size: 8px; /* Fallback font size set to 8px */
     font-size: var(--default-font-size, 16px); /* Use browser's default font size if available */
     color: #333;
-    background-color: lightblue;
-    height: 100%; /* Use complete height of the container */
-    display: flex;
 
-;    
+    height: 100%; /* Use complete height of the container */
+   
+
+    display: flex;
+    background: url(${Wallpaper}) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+  
 }
 
     #root {
-    height: 100%; /* Ensure the root element also takes full height */
+    height: 100vh; /* Ensure the root element also takes full height */ 
+    width: 100vw;
     }
+
+      /* Hide scrollbar for Chrome, Safari and Opera */
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
 
  
 `

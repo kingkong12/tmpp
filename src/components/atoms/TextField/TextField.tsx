@@ -24,7 +24,6 @@ const TextField: React.FC<InputFieldProps> = ({
   type = 'password', // Default to password type
   placeholder = '',
   required = false,
-  errorMessage = '',
 }) => {
   const [isFocused, setIsFocused] = useState(false)
   const [value, setValue] = useState('')
@@ -33,6 +32,13 @@ const TextField: React.FC<InputFieldProps> = ({
   const handleIconClick = () => {
     if (type === 'password') {
       setIsPasswordVisible(!isPasswordVisible)
+    }
+  }
+
+  const handleIconKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault()
+      handleIconClick()
     }
   }
 
@@ -54,7 +60,9 @@ const TextField: React.FC<InputFieldProps> = ({
         {type === 'password' && (
           <Icon
             onClick={handleIconClick}
+            onKeyDown={handleIconKeyDown}
             role="button"
+            tabIndex={0}
             aria-label="Toggle password visibility"
           >
             <img
