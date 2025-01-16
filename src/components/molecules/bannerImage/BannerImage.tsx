@@ -1,7 +1,4 @@
-import React from 'react'
 import styled from 'styled-components'
-import CircularLogo from '../../../assets/svg/circleLogo.svg'
-import DektopMobile from '../../../assets/svg/desktopAndMobile.svg'
 import IntroBannerTitle from '../../../assets/svg/monitorAndMobile.svg'
 
 const BannerImage = () => {
@@ -32,10 +29,6 @@ const ImageWrapper = styled.div`
 
   justify-content: center;
   align-items: center;
-`
-
-const CircularLogoWrapper = styled.div`
-  position: absolute;
 `
 
 const MobileandDesktopWrapper = styled.div`
