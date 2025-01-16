@@ -67,6 +67,7 @@ const TextField: React.FC<InputFieldProps> = ({
             role="button"
             tabIndex={0}
             aria-label="Toggle password visibility"
+            hasOpacity={isPasswordVisible}
           >
             <img
               src={isPasswordVisible ? eyeIcon : eyeShow}

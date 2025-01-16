@@ -32,7 +32,7 @@ export const Container = styled.div`
 
 export const ImageWrapper = styled.div`
   min-width: 13.75rem;
-  padding: 1.125rem 0 0.625rem 0;
+  padding: 0.625rem 0 0.625rem 0;
   margin-bottom: 0.3125rem;
   width: 100%;
   border-top-left-radius: 0.25rem;
@@ -43,14 +43,18 @@ export const ImageWrapper = styled.div`
   background-color: ${({ theme }) => theme.static.white || '#FFFFFF'};
 
   > img {
-    max-width: 16.63rem;
+    width: 191.26px;
 
+    ${media.minSmallLargeDesktop(`
+     width: 170.01px;
+
+    `)}
     ${media.minDesktop(`
-      max-width: 9.08rem; 
+        width: 191.26px;
     `)}
 
     ${media.minLargeDesktop(`
-      max-width: 16.63rem; 
+         width:  266px; 
     `)}
   }
 `

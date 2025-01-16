@@ -1,9 +1,6 @@
 import IntroBannerTitle from '../../../assets/svg/introbannertitle.svg'
-import {
-  BannerContainer,
-  ImageWrapper,
-  TextWrapper,
-} from './introductionBanner.styles'
+import BannerText from '../../../assets/svg/BannerText.svg'
+import { BannerContainer, ImageWrapper } from './introductionBanner.styles'
 
 const IntroductionBanner: React.FC = () => {
   return (
@@ -11,12 +8,10 @@ const IntroductionBanner: React.FC = () => {
       <ImageWrapper>
         <img src={IntroBannerTitle} alt="Introduction Banner Title" />
       </ImageWrapper>
-      <TextWrapper>
-        Introducing a remarkable set of new features that simplify and
-        accelerate everyday tasks performed in the Portal. Providers have even
-        greater visibility and control over flexible financing offered through
-        the iCreditWorks native mobile App!
-      </TextWrapper>
+
+      <ImageWrapper>
+        <img src={BannerText} alt="Banner Text" />
+      </ImageWrapper>
     </BannerContainer>
   )
 }

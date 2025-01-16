@@ -13,6 +13,8 @@ export const SecurityBanner = styled.div`
   line-height: 1.5;
   padding: 0 1rem;
   box-sizing: border-box;
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
 `
 
 export const IconWrapper = styled.div`

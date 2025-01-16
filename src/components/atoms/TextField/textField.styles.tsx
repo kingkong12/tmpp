@@ -12,16 +12,30 @@ export const InputIconWrapper = styled.div`
   align-items: center;
   position: relative;
   border: 0.0625rem solid ${({ theme }) => theme.colors.chineseSilver || '#ccc'};
+  border-radius: 1.08px;
+  ${media.minSmallLargeDesktop(`
+  border-radius: 0.96px;
+  `)}
+
+  ${media.minDesktop(`
+  border-radius: 1.08px;
+  `)}
+
+  ${media.minLargeDesktop(`
+  border-radius: 1.15px;
+  `)}
+
   transition: border-color 0.3s ease;
 `
 
-export const Icon = styled.div`
+export const Icon = styled.div<{ hasOpacity: boolean }>`
   position: absolute;
   right: 0.8rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: ${({ hasOpacity }) => (hasOpacity ? 1 : 0.6)};
 
   img {
     width: 1.3125rem;

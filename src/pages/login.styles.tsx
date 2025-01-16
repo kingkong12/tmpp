@@ -7,6 +7,7 @@ export const Container = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  position: relative;
 `
 
 export const FormWrapper = styled.div`
@@ -54,4 +55,21 @@ export const ImageContainer = styled.div`
   ${media.minSmallLargeDesktop(`
    display: unset;
   `)}
+`
+
+export const FloatingUserProfile = styled.div`
+  position: absolute;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  z-index: 10;
+  display: none;
+
+  ${media.minSmallLargeDesktop(`
+    display: block;
+  `)}
+
+  img {
+    width: 3.125rem;
+    height: 3.125rem;
+  }
 `

@@ -18,14 +18,3 @@ export const ImageWrapper = styled.div`
     max-width: 100%;
   }
 `
-
-export const TextWrapper = styled.div`
-  text-align: start;
-  height: 50%;
-  font-size: 1rem;
-  color: ${({ theme }) => theme.static.white || '#FFFFFF'};
-
-  p {
-    margin: 0.625rem 0;
-  }
-`
