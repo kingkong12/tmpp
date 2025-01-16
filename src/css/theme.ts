@@ -1,11 +1,20 @@
 const theme = {
   colors: {
-    primary: '#D2691E', // A shade close to the orange "Login" button
-    secondary: '#4B4B4B', // A darker gray for text contrast
-    background: '#F5DEB3', // A light wheat color for the background
-    text: '#FFFFFF', // White text color for contrast
+    primary: '#D2691E',
+    secondary: '#4B4B4B',
+    background: '#F5DEB3',
+    text: '#FFFFFF',
+    chineseSilver: '#CCCCCC',
+    blackShade: '#5E6B75',
   },
-  borderRadius: '4px',
+  fontColor: {
+    primary: '#333333',
+  },
+  static: {
+    white: '#FFFFFF',
+    blackCoffee: '#11111',
+    blueShade: '#486082',
+  },
 }
 
 export default theme
