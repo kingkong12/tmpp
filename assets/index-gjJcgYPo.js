@@ -401,7 +401,7 @@ Error generating stack: `+i.message+`
 `,Ih=de.img`
   position: absolute;
   top: 0%;
-  left: 35%;
+  left: 32%;
 
   width: 52%;
   height: 35%;
@@ -412,12 +412,12 @@ Error generating stack: `+i.message+`
 
   ${te.minDesktop(`
     top: -3%;
-       left: 35%;
+    left: 32%;
   `)}
 
   ${te.minLargeDesktop(`
  top: -3%;
-        left: 35%;
+        left: 32%;
          width: 53%;
     height: 33%;
   `)}
@@ -471,8 +471,8 @@ Error generating stack: `+i.message+`
   `)}
 `,$h=de.div`
   position: absolute;
-  bottom: 1.25rem;
-  right: 1.25rem;
+  bottom: 3%;
+  right: 2%;
   z-index: 10;
   display: none;
 
