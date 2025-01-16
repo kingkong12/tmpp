@@ -6,16 +6,16 @@ const sizes = {
 }
 
 export const media = {
-  LargeDesktop: (styles: string) => `
-    @media (max-width: ${sizes.LargeDesktop}px) {
-      ${styles}
-    }
-  `,
-  desktop: (styles: string) => `
-    @media (max-width: ${sizes.desktop}px) {
-      ${styles}
-    }
-  `,
+  // LargeDesktop: (styles: string) => `
+  //   @media (max-width: ${sizes.LargeDesktop}px) {
+  //     ${styles}
+  //   }
+  // `,
+  // desktop: (styles: string) => `
+  //   @media (max-width: ${sizes.desktop}px) {
+  //     ${styles}
+  //   }
+  // `,
   minLargeDesktop: (styles: string) => `
   @media (min-width: ${sizes.LargeDesktop}px) {
     ${styles}
@@ -26,11 +26,11 @@ export const media = {
       ${styles}
     }
   `,
-  smallLargeDesktop: (styles: string) => `
-    @media (max-width: ${sizes.smallLargeDesktop}px) {
-      ${styles}
-    }
-  `,
+  // smallLargeDesktop: (styles: string) => `
+  //   @media (max-width: ${sizes.smallLargeDesktop}px) {
+  //     ${styles}
+  //   }
+  // `,
   minSmallLargeDesktop: (styles: string) => `
     @media (min-width: ${sizes.smallLargeDesktop}px) {
       ${styles}
@@ -41,14 +41,14 @@ export const media = {
       ${styles}
     }
   `,
-  minMobile: (styles: string) => `
-    @media (min-width: ${sizes.mobile}px) {
-      ${styles}
-    }
-  `,
-  hideOnMobile: () => `
-    @media (max-width: ${sizes.mobile}px) {
-      display: none;
-    }
-  `,
+  // minMobile: (styles: string) => `
+  //   @media (min-width: ${sizes.mobile}px) {
+  //     ${styles}
+  //   }
+  // `,
+  // hideOnMobile: () => `
+  //   @media (max-width: ${sizes.mobile}px) {
+  //     display: none;
+  //   }
+  // `,
 }

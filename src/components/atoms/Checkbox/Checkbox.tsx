@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { memo, useCallback } from 'react'
 import { CheckboxWrapper, StyledCheckbox, Label, Icon } from './checkbox.styles'
-import tickMark from '../../../assets/svg/mark.svg' // Import the SVG file for the tick mark
+import tickMark from '../../../assets/svg/mark.svg'
 
 interface CheckboxProps {
   id: string
@@ -15,12 +15,15 @@ const Checkbox: React.FC<CheckboxProps> = ({
   checked,
   onChange,
 }) => {
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === ' ') {
-      e.preventDefault()
-      onChange(!checked)
-    }
-  }
+  const handleKeyDown = useCallback(
+    (e: React.KeyboardEvent<HTMLInputElement>) => {
+      if (e.key === ' ') {
+        e.preventDefault()
+        onChange(!checked)
+      }
+    },
+    [checked, onChange]
+  )
 
   return (
     <CheckboxWrapper>
@@ -44,4 +47,4 @@ const Checkbox: React.FC<CheckboxProps> = ({
   )
 }
 
-export default Checkbox
+export default memo(Checkbox)

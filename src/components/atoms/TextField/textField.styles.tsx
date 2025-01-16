@@ -11,8 +11,7 @@ export const InputIconWrapper = styled.div`
   display: flex;
   align-items: center;
   position: relative;
-  border: 1px solid ${({ theme }) => theme.colors.chineseSilver || '#ccc'};
-  /* padding-right: 2.5rem; */
+  border: 0.0625rem solid ${({ theme }) => theme.colors.chineseSilver || '#ccc'};
   transition: border-color 0.3s ease;
 `
 
@@ -39,19 +38,19 @@ export const Input = styled.input<{ type: string }>`
   line-height: 1.12rem;
   padding: 0.5rem 0.5rem;
   width: 100%;
-  height: 54px;
+  height: 3.375rem;
   padding-right: ${({ type }) => (type === 'password' ? '2.5rem' : '0.5rem')};
 
   ${media.minSmallLargeDesktop(`
-       height: 43.12px;
+       height: 2.695rem;
     `)}
 
   ${media.minDesktop(`
-       height: 48.52px;
+       height: 3.0325rem;
     `)} 
     
   ${media.minLargeDesktop(`
-       height: 67.5px;
+       height: 4.21875rem;
     `)}
 `
 

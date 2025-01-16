@@ -5,18 +5,18 @@ export const SecurityBanner = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 34.5px;
+  height: 2.15625rem;
   background-color: ${({ theme }) => theme.colors.blackShade || '#486082'};
   color: ${({ theme }) => theme.colors.white || '#ffffff'};
   font-family: 'Neue Haas Grotesk Display', Arial, sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.5;
-  padding: 0 16px;
+  padding: 0 1rem;
   box-sizing: border-box;
 `
 
 export const IconWrapper = styled.div`
-  margin-right: 10px;
+  margin-right: 0.625rem;
   position: relative;
-  top: 2px; /* Bring the position down by 2 pixels */
+  top: 0.125rem;
 `

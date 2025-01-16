@@ -1,7 +1,11 @@
-import styled from 'styled-components'
 import IntroBannerTitle from '../../../assets/svg/introbannertitle.svg'
+import {
+  BannerContainer,
+  ImageWrapper,
+  TextWrapper,
+} from './introductionBanner.styles'
 
-const IntroductionBanner = () => {
+const IntroductionBanner: React.FC = () => {
   return (
     <BannerContainer>
       <ImageWrapper>
@@ -18,37 +22,3 @@ const IntroductionBanner = () => {
 }
 
 export default IntroductionBanner
-
-const BannerContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  /* align-items: center;
-  justify-content: center; */
-  padding: 20px;
-  //background-color: lightblue; /* Make background transparent */
-  /* max-width: 237px; */
-  max-width: 100%; /* Ensures the container doesn't exceed the viewport width */
-  box-sizing: border-box; /* Prevents padding from adding to the width */
-`
-
-const ImageWrapper = styled.div`
-  display: flex;
-  margin-bottom: 40px;
-
-  img {
-    width: 100%;
-    max-height: 50%;
-    max-width: 100%;
-  }
-`
-
-const TextWrapper = styled.div`
-  text-align: start;
-  height: 50%;
-  font-size: 16px;
-  color: ${({ theme }) => theme.static.white || '#FFFFFF'};
-
-  p {
-    margin: 10px 0;
-  }
-`

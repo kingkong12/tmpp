@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, memo, useCallback } from 'react'
 import {
   InputWrapper,
   Input,
@@ -21,7 +21,7 @@ interface InputFieldProps {
 const TextField: React.FC<InputFieldProps> = ({
   id,
   label = `label`,
-  type = 'password', // Default to password type
+  type = 'password',
   placeholder = '',
   required = false,
 }) => {
@@ -29,18 +29,21 @@ const TextField: React.FC<InputFieldProps> = ({
   const [value, setValue] = useState('')
   const [isPasswordVisible, setIsPasswordVisible] = useState(false)
 
-  const handleIconClick = () => {
+  const handleIconClick = useCallback(() => {
     if (type === 'password') {
       setIsPasswordVisible(!isPasswordVisible)
     }
-  }
+  }, [type, isPasswordVisible])
 
-  const handleIconKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault()
-      handleIconClick()
-    }
-  }
+  const handleIconKeyDown = useCallback(
+    (e: React.KeyboardEvent<HTMLDivElement>) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault()
+        handleIconClick()
+      }
+    },
+    [handleIconClick]
+  )
 
   return (
     <InputWrapper>
@@ -80,4 +83,4 @@ const TextField: React.FC<InputFieldProps> = ({
   )
 }
 
-export default TextField
+export default memo(TextField)

@@ -6,10 +6,9 @@ export const CheckboxWrapper = styled.div`
   align-items: center;
   gap: 0.8rem;
   position: relative;
-  cursor: pointer; /* Ensure the cursor changes to pointer */
+  cursor: pointer;
 `
 
-// Hidden default checkbox input
 export const StyledCheckbox = styled.input`
   position: absolute;
   opacity: 0;
@@ -18,75 +17,58 @@ export const StyledCheckbox = styled.input`
   z-index: 1;
 `
 
-// Custom checkbox square with tick mark
 export const Icon = styled.span<{ checked: boolean }>`
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
   border: 0.07875rem solid
-    ${({ theme }) => theme.colors.chineseSilver || '#ccc'}; /* 1.26px */
-
+    ${({ theme }) => theme.colors.chineseSilver || '#ccc'};
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 
   ${media.minSmallLargeDesktop(`
-  width: 15.33px;
-  height: 15.33px;
-
-`)}
+    width: 0.958125rem;
+    height: 0.958125rem;
+  `)}
 
   ${media.minDesktop(`
-  width: 17.25px;
-  height: 17.25px;
+    width: 1.078125rem;
+    height: 1.078125rem;
+  `)}
 
-`)}
-
-${media.minLargeDesktop(`
-  width: 24px;
-  height: 24px;
-
-`)}
-
-
-
+  ${media.minLargeDesktop(`
+    width: 1.5rem;
+    height: 1.5rem;
+  `)}
 
   img {
     width: 1rem;
     height: 1rem;
-    display: ${({ checked }) =>
-      checked ? 'block' : 'none'}; /* Show tick only if checked */
+    display: ${({ checked }) => (checked ? 'block' : 'none')};
 
-    ${media.minSmallLargeDesktop(`
+    ${media.minSmallLargeDesktop(``)}
 
-`)}
+    ${media.minDesktop(``)}
 
-    ${media.minDesktop(`
-
-`)} 
-
-${media.minLargeDesktop(`
-
-`)}
+    ${media.minLargeDesktop(``)}
   }
 `
 
-// Label for the checkbox
 export const Label = styled.label`
-  font-size: 15.6px;
+  font-size: 0.975rem;
   color: ${({ theme }) => theme.static.blackCoffee || '#000'};
   cursor: pointer;
 
   ${media.minSmallLargeDesktop(`
-
-    font-size: 11.5px;
-`)}
+    font-size: 0.71875rem;
+  `)}
 
   ${media.minDesktop(`
-  font-size: 13px;
-`)} 
+    font-size: 0.8125rem;
+  `)}
 
-${media.minLargeDesktop(`
-  font-size: 18px;
-`)}
+  ${media.minLargeDesktop(`
+    font-size: 1.125rem;
+  `)}
 `
