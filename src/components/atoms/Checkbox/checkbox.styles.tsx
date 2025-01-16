@@ -14,6 +14,7 @@ export const StyledCheckbox = styled.input`
   opacity: 0;
   cursor: pointer;
   height: 100%;
+  width: 1.5rem;
   z-index: 1;
 `
 
