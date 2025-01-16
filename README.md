@@ -1,50 +1,31 @@
-# React + TypeScript + Vite
+1. **Clone the repository:**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+   ```bash
+   git clone https://github.com/your-username/my-react-app.git
+   cd my-react-app
+   ```
 
-Currently, two official plugins are available:
+2. **Install dependencies:**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+   ```bash
+   npm install
+   ```
 
-## Expanding the ESLint configuration
+3. **Start the development server:**
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+   ```bash
+   npm start
+   ```
 
-- Configure the top-level `parserOptions` property like this:
+4. **Open your browser:**
+   Navigate to `http://localhost:3000` to see the app running.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+5. Assumptions
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- Assumption: For devices with resolutions below 1280px, the app is treated as running on a mobile device. The current production version includes additional breakpoints around 780px, which help prevent image overlap issues.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- The bold font characters are not loading properly due to asset-related issue.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+-     To optimize performance, we propose combining the SVGs for the circular icon and desktop/mobile images. While responsive programming for these elements is possible, the SVG approach is far more lightweight and highly performance-efficient. Therefore, to avoid overengineering, I am deprioritizing the implementation for now.
+
+- Margins and padding around the forms, text, and images have been assumed since Figma provided only a read-only mode (with no access to specific margin and padding details). Additionally, the reference example contained negative margins, which are considered an incorrect implementation.
