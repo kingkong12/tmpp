@@ -16,7 +16,7 @@ const Checkbox: React.FC<CheckboxProps> = ({
   onChange,
 }) => {
   const handleKeyDown = useCallback(
-    (e: React.KeyboardEvent<HTMLInputElement>) => {
+    (e: React.KeyboardEvent<HTMLInputElement | HTMLDivElement>) => {
       if (e.key === ' ') {
         e.preventDefault()
         onChange(!checked)

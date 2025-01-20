@@ -28,14 +28,14 @@ export const InputIconWrapper = styled.div`
   transition: border-color 0.3s ease;
 `
 
-export const Icon = styled.div<{ hasOpacity: boolean }>`
+export const Icon = styled.div<{ hasopacity: boolean }>`
   position: absolute;
   right: 0.8rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: ${({ hasOpacity }) => (hasOpacity ? 1 : 0.6)};
+  opacity: ${({ hasopacity }) => (hasopacity ? 1 : 0.6)};
 
   img {
     width: 1.3125rem;
@@ -68,12 +68,12 @@ export const Input = styled.input<{ type: string }>`
     `)}
 `
 
-export const Label = styled.label<{ isFocused: boolean }>`
+export const Label = styled.label<{ isfocused: boolean }>`
   position: absolute;
-  top: ${({ isFocused }) => (isFocused ? '-0.1rem' : '50%')};
+  top: ${({ isfocused }) => (isfocused ? '-0.1rem' : '50%')};
   left: 0.5rem;
-  transform: translateY(${({ isFocused }) => (isFocused ? '0' : '-50%')});
-  font-size: ${({ isFocused }) => (isFocused ? '0.8rem' : '1rem')};
+  transform: translateY(${({ isfocused }) => (isfocused ? '0' : '-50%')});
+  font-size: ${({ isfocused }) => (isfocused ? '0.8rem' : '1rem')};
   color: ${({ theme }) => theme.colors.secondary || '#666'};
   transition: all 0.3s ease;
   pointer-events: none;
