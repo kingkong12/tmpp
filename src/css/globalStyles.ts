@@ -28,6 +28,11 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scrollbar-width: none;
+    }
+
+    *::-webkit-scrollbar {
+    display: none;
     }
 
     html, body {
