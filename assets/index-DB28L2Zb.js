@@ -388,7 +388,7 @@ Error generating stack: `+i.message+`
 `,Ih=de.img`
   position: absolute;
   top: 0%;
-  left: 35%;
+  left: 32%;
 
   width: 52%;
   height: 35%;
@@ -399,12 +399,12 @@ Error generating stack: `+i.message+`
 
   ${te.minDesktop(`
     top: -3%;
-       left: 35%;
+     left: 32%;
   `)}
 
   ${te.minLargeDesktop(`
  top: -3%;
-        left: 35%;
+  left: 32%;
          width: 53%;
     height: 33%;
   `)}
@@ -497,6 +497,11 @@ Error generating stack: `+i.message+`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scrollbar-width: none;
+    }
+
+    *::-webkit-scrollbar {
+    display: none;
     }
 
     html, body {
