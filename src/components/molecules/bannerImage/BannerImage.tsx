@@ -60,7 +60,7 @@ const ResponsiveImage = styled.img`
 const CircularResponsiveImage = styled.img`
   position: absolute;
   top: 0%;
-  left: 35%;
+  left: 32%;
 
   width: 52%;
   height: 35%;
@@ -71,12 +71,12 @@ const CircularResponsiveImage = styled.img`
 
   ${media.minDesktop(`
     top: -3%;
-       left: 35%;
+     left: 32%;
   `)}
 
   ${media.minLargeDesktop(`
  top: -3%;
-        left: 35%;
+  left: 32%;
          width: 53%;
     height: 33%;
   `)}
